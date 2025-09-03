@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigiConnect Pro - Votre Partenaire de Transformation Numérique en Sud-Kivu</title>
+    <meta name="description" content="DigiConnect Pro - Solutions numériques complètes, formation technologique et support IT 24/7 au Sud-Kivu. Expertise locale, standards internationaux." />
+    <link rel="stylesheet" href="../css/main.css" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdigiconnec7137back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="font-serif bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-soft sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <svg class="h-10 w-auto" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="15" width="30" height="30" rx="6" fill="#1E3A8A"/>
+                        <rect x="20" y="25" width="10" height="10" rx="2" fill="#10B981"/>
+                        <path d="M50 20h8v4h-8v-4zm0 8h12v4H50v-4zm0 8h10v4H50v-4z" fill="#1E3A8A"/>
+                        <text x="70" y="25" font-family="Inter" font-weight="600" font-size="18" fill="#1E3A8A">HSF_Digit</text>
+                        <text x="70" y="40" font-family="Inter" font-weight="400" font-size="12" fill="#EA580C">Connect-Pro</text>
+                    </svg>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="text-primary font-inter font-semibold px-3 py-2 rounded-md text-sm">Accueil</a>
+                        <a href="about_us.html" class="text-text-secondary hover:text-primary transition-fast px-3 py-2 rounded-md text-sm">À Propos</a>
+                        <a href="training_academy.html" class="text-text-secondary hover:text-primary transition-fast px-3 py-2 rounded-md text-sm">Formation</a>
+                        <a href="knowledge_center.html" class="text-text-secondary hover:text-primary transition-fast px-3 py-2 rounded-md text-sm">Ressources</a>
+                        <a href="client_portal.html" class="text-text-secondary hover:text-primary transition-fast px-3 py-2 rounded-md text-sm">Portail Client</a>
+                        <a href="contact_consultation.html" class="btn-primary">Consultation</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary p-2" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                    <a href="homepage.html" class="text-primary font-inter font-semibold block px-3 py-2 rounded-md text-base">Accueil</a>
+                    <a href="about_us.html" class="text-text-secondary hover:text-primary transition-fast block px-3 py-2 rounded-md text-base">À Propos</a>
+                    <a href="training_academy.html" class="text-text-secondary hover:text-primary transition-fast block px-3 py-2 rounded-md text-base">Formation</a>
+                    <a href="knowledge_center.html" class="text-text-secondary hover:text-primary transition-fast block px-3 py-2 rounded-md text-base">Ressources</a>
+                    <a href="client_portal.html" class="text-text-secondary hover:text-primary transition-fast block px-3 py-2 rounded-md text-base">Portail Client</a>
+                    <a href="contact_consultation.html" class="btn-primary w-full text-center mt-4">Consultation</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Multi-Path Entry -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Video/Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Équipe DigiConnect Pro travaillant avec des entreprises locales" class="w-full h-full object-cover" onerror="this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=2000'; this.onerror=null;" />
+            <div class="absolute inset-0 bg-primary opacity-80"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Trust Signals -->
+            <div class="flex flex-wrap justify-center gap-6 mb-8 text-white">
+                <div class="flex items-center space-x-2">
+                    <svg class="h-5 w-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-sm font-inter">Support Local 24/7</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="h-5 w-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-sm font-inter">Techniciens Certifiés</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="h-5 w-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-sm font-inter">Au Service du Sud-Kivu Depuis 2020</span>
+                </div>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl md:text-6xl font-inter font-bold text-white mb-6 text-balance">
+                Votre Partenaire de <span class="text-secondary">Transformation Numérique</span> au Sud-Kivu
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto text-balance">
+                Expertise locale, standards internationaux. Nous connectons, formons et transformons les entreprises du Sud-Kivu.
+            </p>
+
+            <!-- Multi-Path Entry Points -->
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Transform Business -->
+                <div class="card hover:scale-105 transition-smooth cursor-pointer group" onclick="window.location.href='contact_consultation.html'">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-fast">
+                            <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-inter font-semibold text-primary mb-2">Transformez Votre Entreprise</h3>
+                        <p class="text-text-secondary mb-4">Solutions IT complètes pour moderniser vos opérations</p>
+                        <span class="text-primary font-inter font-semibold group-hover:text-primary-700 transition-fast">Commencer →</span>
+                    </div>
+                </div>
+
+                <!-- Learn Digital Skills -->
+                <div class="card hover:scale-105 transition-smooth cursor-pointer group" onclick="window.location.href='training_academy.html'">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary-200 transition-fast">
+                            <svg class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-inter font-semibold text-secondary mb-2">Apprenez le Numérique</h3>
+                        <p class="text-text-secondary mb-4">Formations certifiantes en technologie et finance numérique</p>
+                        <span class="text-secondary font-inter font-semibold group-hover:text-secondary-700 transition-fast">Explorer →</span>
+                    </div>
+                </div>
+
+                <!-- Emergency Support -->
+                <div class="card hover:scale-105 transition-smooth cursor-pointer group" onclick="window.location.href='contact_consultation.html'">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-200 transition-fast">
+                            <svg class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 109.75 9.75A9.75 9.75 0 0012 2.25z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-inter font-semibold text-accent mb-2">Support IT d'Urgence</h3>
+                        <p class="text-text-secondary mb-4">Assistance technique immédiate 24/7</p>
+                        <span class="text-accent font-inter font-semibold group-hover:text-accent-700 transition-fast">Appeler →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Metrics Bar -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="group">
+                    <div class="text-4xl font-inter font-bold text-primary mb-2 group-hover:text-primary-700 transition-fast">500+</div>
+                    <div class="text-text-secondary">Entreprises Connectées</div>
+                </div>
+                <div class="group">
+                    <div class="text-4xl font-inter font-bold text-secondary mb-2 group-hover:text-secondary-700 transition-fast">1000+</div>
+                    <div class="text-text-secondary">Étudiants Formés</div>
+                </div>
+                <div class="group">
+                    <div class="text-4xl font-inter font-bold text-accent mb-2 group-hover:text-accent-700 transition-fast">99.9%</div>
+                    <div class="text-text-secondary">Garantie de Disponibilité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Services Grid -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-inter font-bold text-primary mb-4">Nos Solutions Numériques</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Des services complets pour accompagner votre transformation digitale</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Network Infrastructure -->
+                <div class="card group hover:shadow-strong cursor-pointer transition-smooth" onclick="window.location.href='contact_consultation.html'">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-200 transition-fast">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h6a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h6a2 2 0 002-2v-4a2 2 0 00-2-2m8-8a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-3">Infrastructure Réseau</h3>
+                    <p class="text-text-secondary mb-4">Installation et maintenance de réseaux d'entreprise sécurisés et performants.</p>
+                    <div class="opacity-0 group-hover:opacity-100 transition-fast">
+                        <div class="text-sm text-secondary font-inter font-semibold mb-2">✓ 150+ réseaux installés</div>
+                        <div class="text-sm text-text-secondary">"Réseau stable depuis 2 ans" - Hôtel Panorama</div>
+                    </div>
+                </div>
+
+                <!-- Internet Connectivity -->
+                <div class="card group hover:shadow-strong cursor-pointer transition-smooth" onclick="window.location.href='contact_consultation.html'">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary-200 transition-fast">
+                        <svg class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-secondary mb-3">Connectivité Internet</h3>
+                    <p class="text-text-secondary mb-4">Solutions de connectivité haut débit adaptées aux besoins de votre entreprise.</p>
+                    <div class="opacity-0 group-hover:opacity-100 transition-fast">
+                        <div class="text-sm text-secondary font-inter font-semibold mb-2">✓ Jusqu'à 1Gbps disponible</div>
+                        <div class="text-sm text-text-secondary">"Connexion fiable 24/7" - Banque Populaire</div>
+                    </div>
+                </div>
+
+                <!-- Custom Applications -->
+                <div class="card group hover:shadow-strong cursor-pointer transition-smooth" onclick="window.location.href='contact_consultation.html'">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent-200 transition-fast">
+                        <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-accent mb-3">Applications Sur Mesure</h3>
+                    <p class="text-text-secondary mb-4">Développement d'applications web et mobile adaptées à vos processus métier.</p>
+                    <div class="opacity-0 group-hover:opacity-100 transition-fast">
+                        <div class="text-sm text-accent font-inter font-semibold mb-2">✓ 50+ apps développées</div>
+                        <div class="text-sm text-text-secondary">"App parfaite pour nos besoins" - Coopérative MUUNGANO</div>
+                    </div>
+                </div>
+
+                <!-- Surveillance Systems -->
+                <div class="card group hover:shadow-strong cursor-pointer transition-smooth" onclick="window.location.href='contact_consultation.html'">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-200 transition-fast">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-3">Systèmes de Surveillance</h3>
+                    <p class="text-text-secondary mb-4">Installation de caméras de sécurité et systèmes de surveillance intelligents.</p>
+                    <div class="opacity-0 group-hover:opacity-100 transition-fast">
+                        <div class="text-sm text-primary font-inter font-semibold mb-2">✓ Surveillance 24/7</div>
+                        <div class="text-sm text-text-secondary">"Sécurité renforcée" - Centre Commercial Nyawera</div>
+                    </div>
+                </div>
+
+                <!-- Digital Training -->
+                <div class="card group hover:shadow-strong cursor-pointer transition-smooth" onclick="window.location.href='training_academy.html'">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary-200 transition-fast">
+                        <svg class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-secondary mb-3">Formation Numérique</h3>
+                    <p class="text-text-secondary mb-4">Programmes de formation en informatique et compétences numériques.</p>
+                    <div class="opacity-0 group-hover:opacity-100 transition-fast">
+                        <div class="text-sm text-secondary font-inter font-semibold mb-2">✓ Certifications reconnues</div>
+                        <div class="text-sm text-text-secondary">"Formation excellente" - Marie Uwimana</div>
+                    </div>
+                </div>
+
+                <!-- Financial Literacy -->
+                <div class="card group hover:shadow-strong cursor-pointer transition-smooth" onclick="window.location.href='training_academy.html'">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent-200 transition-fast">
+                        <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-accent mb-3">Éducation Financière</h3>
+                    <p class="text-text-secondary mb-4">Formation en littératie financière et services bancaires numériques.</p>
+                    <div class="opacity-0 group-hover:opacity-100 transition-fast">
+                        <div class="text-sm text-accent font-inter font-semibold mb-2">✓ 500+ personnes formées</div>
+                        <div class="text-sm text-text-secondary">"Très utile pour mon business" - Jean Kabongo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Expertise, Global Standards -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Team Certifications -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-inter font-bold text-primary mb-6">Expertise Locale, Standards Internationaux</h2>
+                    <p class="text-lg text-text-secondary mb-8">Notre équipe combine une connaissance approfondie du marché local avec des certifications internationales reconnues.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                                <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-inter font-semibold text-primary">Certifications Cisco & Microsoft</h3>
+                                <p class="text-text-secondary">Nos techniciens sont certifiés par les leaders mondiaux</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center">
+                                <svg class="h-6 w-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-inter font-semibold text-secondary">Présence Locale Depuis 2020</h3>
+                                <p class="text-text-secondary">Connaissance approfondie du marché du Sud-Kivu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center">
+                                <svg class="h-6 w-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-inter font-semibold text-accent">Support Multilingue</h3>
+                                <p class="text-text-secondary">Service en français, swahili et anglais</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner Logos -->
+                <div class="text-center">
+                    <h3 class="text-xl font-inter font-semibold text-text-primary mb-8">Nos Partenaires Technologiques</h3>
+                    <div class="grid grid-cols-2 gap-8 items-center">
+                        <div class="bg-surface p-6 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cisco Partner" class="h-12 w-auto mx-auto opacity-60 hover:opacity-100 transition-fast" onerror="this.src='https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=400'; this.onerror=null;" />
+                        </div>
+                        <div class="bg-surface p-6 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Microsoft Partner" class="h-12 w-auto mx-auto opacity-60 hover:opacity-100 transition-fast" onerror="this.src='https://images.pixabay.com/photo/2013/02/12/09/07/microsoft-80660_960_720.png'; this.onerror=null;" />
+                        </div>
+                        <div class="bg-surface p-6 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Google Partner" class="h-12 w-auto mx-auto opacity-60 hover:opacity-100 transition-fast" onerror="this.src='https://images.pexels.com/photos/2659475/pexels-photo-2659475.jpeg?auto=compress&cs=tinysrgb&w=400'; this.onerror=null;" />
+                        </div>
+                        <div class="bg-surface p-6 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AWS Partner" class="h-12 w-auto mx-auto opacity-60 hover:opacity-100 transition-fast" onerror="this.src='https://images.pixabay.com/photo/2018/05/08/21/29/aws-3384001_960_720.png'; this.onerror=null;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Impact Showcase -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-inter font-bold text-primary mb-4">Impact Communautaire</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Nos projets récents transforment les entreprises locales</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Before/After Network Performance -->
+                <div class="card">
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-6">Transformation Réseau - Hôtel Panorama</h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center p-4 bg-red-50 rounded-lg">
+                            <span class="text-text-secondary">Avant: Vitesse Internet</span>
+                            <span class="font-inter font-semibold text-red-600">2 Mbps</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                            <span class="text-text-secondary">Après: Vitesse Internet</span>
+                            <span class="font-inter font-semibold text-green-600">100 Mbps</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-red-50 rounded-lg">
+                            <span class="text-text-secondary">Avant: Temps d'arrêt/mois</span>
+                            <span class="font-inter font-semibold text-red-600">48 heures</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                            <span class="text-text-secondary">Après: Temps d'arrêt/mois</span>
+                            <span class="font-inter font-semibold text-green-600">< 1 heure</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                        <p class="text-sm text-primary italic">"Notre productivité a augmenté de 300% grâce à DigiConnect Pro. Les clients sont maintenant satisfaits de notre WiFi." - Directeur Hôtel Panorama</p>
+                    </div>
+                </div>
+
+                <!-- Success Story -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Équipe travaillant sur un projet réseau" class="w-full h-48 object-cover rounded-lg mb-6" onerror="this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;" />
+                    <h3 class="text-xl font-inter font-semibold text-secondary mb-4">Formation Numérique - Coopérative MUUNGANO</h3>
+                    <p class="text-text-secondary mb-4">Formation de 50 membres en comptabilité numérique et services bancaires mobiles.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <svg class="h-4 w-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-text-secondary">50 membres formés en 3 mois</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="h-4 w-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-text-secondary">Réduction de 80% des erreurs comptables</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="h-4 w-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-text-secondary">100% adoptent les services mobiles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Booking Widget -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-inter font-bold text-white mb-6">Prêt à Transformer Votre Entreprise ?</h2>
+            <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">Obtenez une consultation gratuite et découvrez comment nous pouvons améliorer votre infrastructure IT.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- Phone Consultation -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-fast cursor-pointer" onclick="window.location.href='tel:+243970123456'">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-white mb-2">Appel Direct</h3>
+                    <p class="text-blue-100 text-sm mb-3">Consultation téléphonique immédiate</p>
+                    <p class="text-white font-inter font-semibold">+243 973 992 892</p>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-fast cursor-pointer" onclick="window.open('https://wa.me/243973992892?text=Bonjour, je souhaite une consultation pour mes besoins IT', '_blank')">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.106"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-white mb-2">WhatsApp</h3>
+                    <p class="text-blue-100 text-sm mb-3">Message instantané 24/7</p>
+                    <p class="text-white font-inter font-semibold">Chat Maintenant</p>
+                </div>
+
+                <!-- Email Consultation -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-fast cursor-pointer" onclick="window.location.href='contact_consultation.html'">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h6m-6 0l-2 9a1 1 0 001 1h8a1 1 0 001-1l-2-9m-6 0V7"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-white mb-2">Consultation Détaillée</h3>
+                    <p class="text-blue-100 text-sm mb-3">Formulaire complet en ligne</p>
+                    <p class="text-white font-inter font-semibold">Commencer</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="contact_consultation.html" class="btn-secondary inline-flex items-center space-x-2">
+                    <span>Planifier une Consultation Gratuite</span>
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-10 w-auto mr-3" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="15" width="30" height="30" rx="6" fill="#3B82F6"/>
+                            <rect x="20" y="25" width="10" height="10" rx="2" fill="#10B981"/>
+                            <path d="M50 20h8v4h-8v-4zm0 8h12v4H50v-4zm0 8h10v4H50v-4z" fill="#3B82F6"/>
+                            <text x="70" y="25" font-family="Inter" font-weight="800" font-size="18" fill="white"><em> HSF</em> </text>
+                            <text x="70" y="40" font-family="Inter" font-weight="600" font-size="12" fill="#EA580C">DigiConnect</text>
+                            <text x="70" y="40" font-family="Inter" font-weight="400" font-size="12" fill="#EA580C">Pro</text>
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Votre partenaire de confiance pour la transformation numérique au Sud-Kivu. Expertise locale, standards internationaux.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-fast">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-fast">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-fast">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-inter font-semibold text-white mb-6">Liens Rapides</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about_us.html" class="text-gray-300 hover:text-white transition-fast">À Propos</a></li>
+                        <li><a href="training_academy.html" class="text-gray-300 hover:text-white transition-fast">Formation</a></li>
+                        <li><a href="knowledge_center.html" class="text-gray-300 hover:text-white transition-fast">Centre de Connaissances</a></li>
+                        <li><a href="client_portal.html" class="text-gray-300 hover:text-white transition-fast">Portail Client</a></li>
+                        <li><a href="contact_consultation.html" class="text-gray-300 hover:text-white transition-fast">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-inter font-semibold text-white mb-6">Contact</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-gray-300"> Muhumba,Bukavu, Sud-Kivu, RDC</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span class="text-gray-300">+243 973992892</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <span class="text-gray-300">contact@digiconnectpro.cd</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">© <span id="annee"></span> DigiConnect Pro. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const dateActuelle = new Date();
+        const anneeActuelle = dateActuelle.getFullYear();
+        document.getElementById('annee').textContent = anneeActuelle;
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = event.target.closest('button');
+            
+            if (!menu.contains(event.target) && !button) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card, section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

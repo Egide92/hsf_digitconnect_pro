@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portail Client - DigiConnect Pro</title>
+    <meta name="description" content="Accédez à votre tableau de bord client DigiConnect Pro pour suivre vos projets, gérer vos services et accéder au support technique 24/7." />
+    <link rel="stylesheet" href="../css/main.css" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdigiconnec7137back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="font-serif bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-soft sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <svg class="h-10 w-auto" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="15" width="30" height="30" rx="6" fill="#1E3A8A"/>
+                        <rect x="20" y="25" width="10" height="10" rx="2" fill="#10B981"/>
+                        <path d="M50 20h8v4h-8v-4zm0 8h12v4H50v-4zm0 8h10v4H50v-4z" fill="#1E3A8A"/>
+                        <text x="70" y="25" font-family="Inter" font-weight="600" font-size="18" fill="#1E3A8A">DigiConnect</text>
+                        <text x="70" y="40" font-family="Inter" font-weight="400" font-size="12" fill="#EA580C">Pro</text>
+                    </svg>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="text-text-secondary hover:text-primary transition-fast px-3 py-2 rounded-md text-sm">Accueil</a>
+                        <a href="about_us.html" class="text-text-secondary hover:text-primary transition-fast px-3 py-2 rounded-md text-sm">À Propos</a>
+                        <a href="training_academy.html" class="text-text-secondary hover:text-primary transition-fast px-3 py-2 rounded-md text-sm">Formation</a>
+                        <a href="knowledge_center.html" class="text-text-secondary hover:text-primary transition-fast px-3 py-2 rounded-md text-sm">Ressources</a>
+                        <a href="client_portal.html" class="text-primary font-inter font-semibold px-3 py-2 rounded-md text-sm">Portail Client</a>
+                        <a href="contact_consultation.html" class="btn-primary">Consultation</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary p-2" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-fast block px-3 py-2 rounded-md text-base">Accueil</a>
+                    <a href="about_us.html" class="text-text-secondary hover:text-primary transition-fast block px-3 py-2 rounded-md text-base">À Propos</a>
+                    <a href="training_academy.html" class="text-text-secondary hover:text-primary transition-fast block px-3 py-2 rounded-md text-base">Formation</a>
+                    <a href="knowledge_center.html" class="text-text-secondary hover:text-primary transition-fast block px-3 py-2 rounded-md text-base">Ressources</a>
+                    <a href="client_portal.html" class="text-primary font-inter font-semibold block px-3 py-2 rounded-md text-base">Portail Client</a>
+                    <a href="contact_consultation.html" class="btn-primary w-full text-center mt-4">Consultation</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Client Portal Header -->
+    <section class="bg-primary py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-inter font-bold text-white mb-4">Portail Client</h1>
+                    <p class="text-xl text-blue-100 mb-6 md:mb-0">Bienvenue, Université Evangélique en Afrique, UEA</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                            <span class="text-white font-inter font-semibold">Tous systèmes opérationnels</span>
+                        </div>
+                    </div>
+                    <button class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-2 hover:bg-opacity-20 transition-fast" onclick="window.location.href='contact_consultation.html'">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 109.75 9.75A9.75 9.75 0 0012 2.25z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Overview -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Active Projects -->
+                <div class="card text-center group hover:scale-105 transition-smooth">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-fast">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                    </div>
+                    <div class="text-3xl font-inter font-bold text-primary mb-2">1</div>
+                    <div class="text-text-secondary">Projets Actifs</div>
+                </div>
+
+                <!-- Network Uptime -->
+                <div class="card text-center group hover:scale-105 transition-smooth">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary-200 transition-fast">
+                        <svg class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <div class="text-3xl font-inter font-bold text-secondary mb-2">99.8%</div>
+                    <div class="text-text-secondary">Disponibilité Réseau Stralink</div>
+                </div>
+
+                <!-- Open Tickets -->
+                <div class="card text-center group hover:scale-105 transition-smooth">
+                    <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-200 transition-fast">
+                        <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                        </svg>
+                    </div>
+                    <div class="text-3xl font-inter font-bold text-accent mb-2">1</div>
+                    <div class="text-text-secondary">Tickets Ouverts</div>
+                </div>
+
+                <!-- Next Maintenance -->
+                <div class="card text-center group hover:scale-105 transition-smooth">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-fast">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h6m-6 0l-2 9a1 1 0 001 1h8a1 1 0 001-1l-2-9m-6 0V7"/>
+                        </svg>
+                    </div>
+                    <div class="text-lg font-inter font-bold text-primary mb-2">15 Sept</div>
+                    <div class="text-text-secondary">Prochaine Maintenance</div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <button class="card hover:shadow-strong transition-smooth text-left group" onclick="openTicketModal()">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center group-hover:bg-accent-200 transition-fast">
+                            <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-inter font-semibold text-accent mb-1">Nouveau Ticket</h3>
+                            <p class="text-text-secondary text-sm">Signaler un problème ou demander de l'aide</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button class="card hover:shadow-strong transition-smooth text-left group" onclick="window.location.href='contact_consultation.html'">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center group-hover:bg-secondary-200 transition-fast">
+                            <svg class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-inter font-semibold text-secondary mb-1">Support d'Urgence</h3>
+                            <p class="text-text-secondary text-sm">+243 970 123 456 - Disponible 24/7</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button class="card hover:shadow-strong transition-smooth text-left group" onclick="showBillingSection()">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-200 transition-fast">
+                            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-inter font-semibold text-primary mb-1">Facturation</h3>
+                            <p class="text-text-secondary text-sm">Consulter factures et paiements</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dashboard Content -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Left Column - Projects & Network -->
+                <div class="lg:col-span-2 space-y-8">
+                    <!-- Current Projects -->
+                    <div class="card">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-2xl font-inter font-bold text-primary">Projets en Cours</h2>
+                            <button class="text-primary hover:text-primary-700 transition-fast">
+                                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Project 1 -->
+                            <div class="border border-border rounded-lg p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="text-lg font-inter font-semibold text-primary mb-2">Mise à Niveau Réseau WiFi</h3>
+                                        <p class="text-text-secondary">Installation de nouveaux points d'accès dans les chambres</p>
+                                    </div>
+                                    <span class="bg-secondary-100 text-secondary px-3 py-1 rounded-full text-sm font-inter font-semibold">En Cours</span>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="text-text-secondary">Progression</span>
+                                        <span class="font-inter font-semibold text-secondary">75%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-secondary h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                                    <div>
+                                        <span class="text-text-secondary">Début:</span>
+                                        <div class="font-inter font-semibold">1 Sept 2025</div>
+                                    </div>
+                                    <div>
+                                        <span class="text-text-secondary">Fin Prévue:</span>
+                                        <div class="font-inter font-semibold">20 Sept 2025</div>
+                                    </div>
+                                    <div>
+                                        <span class="text-text-secondary">Technicien:</span>
+                                        <div class="font-inter font-semibold">Egide Batera</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 2 -->
+                            <div class="border border-border rounded-lg p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="text-lg font-inter font-semibold text-primary mb-2">Système de Surveillance</h3>
+                                        <p class="text-text-secondary">Maintenance préventive des caméras de sécurité</p>
+                                    </div>
+                                    <span class="bg-accent-100 text-accent px-3 py-1 rounded-full text-sm font-inter font-semibold">Planifié</span>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="text-text-secondary">Progression</span>
+                                        <span class="font-inter font-semibold text-accent">0%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-accent h-2 rounded-full" style="width: 0%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                                    <div>
+                                        <span class="text-text-secondary">Début:</span>
+                                        <div class="font-inter font-semibold">15 Sept 2025</div>
+                                    </div>
+                                    <div>
+                                        <span class="text-text-secondary">Fin Prévue:</span>
+                                        <div class="font-inter font-semibold">16 Sept 2025</div>
+                                    </div>
+                                    <div>
+                                        <span class="text-text-secondary">Technicien:</span>
+                                        <div class="font-inter font-semibold">Marie Mubalama</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Network Monitoring -->
+                    <div class="card">
+                        <h2 class="text-2xl font-inter font-bold text-primary mb-6">Surveillance Réseau en Temps Réel</h2>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <!-- Bandwidth Usage -->
+                            <div class="bg-surface rounded-lg p-6">
+                                <div class="flex justify-between items-center mb-4">
+                                    <h3 class="font-inter font-semibold text-text-primary">Utilisation Bande Passante</h3>
+                                    <span class="text-sm text-text-secondary">Dernière heure</span>
+                                </div>
+                                <div class="text-3xl font-inter font-bold text-primary mb-2">85 Mbps</div>
+                                <div class="text-sm text-text-secondary mb-4">sur 100 Mbps disponibles</div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-primary h-3 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Connected Devices -->
+                            <div class="bg-surface rounded-lg p-6">
+                                <div class="flex justify-between items-center mb-4">
+                                    <h3 class="font-inter font-semibold text-text-primary">Appareils Connectés</h3>
+                                    <span class="text-sm text-text-secondary">Actuellement</span>
+                                </div>
+                                <div class="text-3xl font-inter font-bold text-secondary mb-2">127</div>
+                                <div class="text-sm text-text-secondary mb-4">appareils actifs</div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                                    <span class="text-sm text-secondary font-inter font-semibold">Tous connectés</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Performance Chart Placeholder -->
+                        <div class="bg-surface rounded-lg p-6">
+                            <h3 class="font-inter font-semibold text-text-primary mb-4">Performance des 7 Derniers Jours</h3>
+                            <div class="h-64 bg-white rounded-lg border border-border flex items-center justify-center">
+                                <div class="text-center">
+                                    <svg class="h-16 w-16 text-gray-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                    </svg>
+                                    <p class="text-text-secondary">Graphique de performance réseau</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Support & Billing -->
+                <div class="space-y-8">
+                    <!-- Support Tickets -->
+                    <div class="card">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-xl font-inter font-bold text-primary">Tickets de Support</h2>
+                            <button class="btn-primary text-sm" onclick="openTicketModal()">Nouveau Ticket</button>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Active Ticket -->
+                            <div class="border border-accent-200 bg-accent-50 rounded-lg p-4">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <h3 class="font-inter font-semibold text-accent mb-1">#TK-2025-001</h3>
+                                        <p class="text-sm text-text-secondary">Connexion lente dans la salle de conférence</p>
+                                    </div>
+                                    <span class="bg-accent text-white px-2 py-1 rounded text-xs font-inter font-semibold">Urgent</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-text-secondary">Créé: 2 Sept 2025</span>
+                                    <span class="text-accent font-inter font-semibold">En cours</span>
+                                </div>
+                            </div>
+
+                            <!-- Recent Tickets -->
+                            <div class="space-y-3">
+                                <div class="border border-border rounded-lg p-4">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <h3 class="font-inter font-semibold text-text-primary mb-1">#TK-2025-002</h3>
+                                            <p class="text-sm text-text-secondary">Demande de formation WiFi</p>
+                                        </div>
+                                        <span class="bg-secondary text-white px-2 py-1 rounded text-xs font-inter font-semibold">Résolu</span>
+                                    </div>
+                                    <div class="text-sm text-text-secondary">Résolu: 1 Sept 2025</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-border">
+                            <button class="text-primary hover:text-primary-700 transition-fast text-sm font-inter font-semibold">Voir tous les tickets →</button>
+                        </div>
+                    </div>
+
+                    <!-- Billing Summary -->
+                    <div class="card" id="billing-section">
+                        <h2 class="text-xl font-inter font-bold text-primary mb-6">Facturation</h2>
+                        
+                        <!-- Current Balance -->
+                        <div class="bg-surface rounded-lg p-6 mb-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="font-inter font-semibold text-text-primary">Solde Actuel</h3>
+                                <span class="text-sm text-text-secondary">Mis à jour: 3 Sept 2025</span>
+                            </div>
+                            <div class="text-3xl font-inter font-bold text-secondary mb-2">0 CDF</div>
+                            <div class="text-sm text-secondary font-inter font-semibold">Compte à jour</div>
+                        </div>
+
+                        <!-- Recent Invoice -->
+                        <div class="border border-border rounded-lg p-4 mb-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="font-inter font-semibold text-text-primary mb-1">Facture #INV-2025-08</h3>
+                                    <p class="text-sm text-text-secondary">Services réseau - Août 2025</p>
+                                </div>
+                                <span class="bg-secondary text-white px-2 py-1 rounded text-xs font-inter font-semibold">Payée</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-inter font-bold text-text-primary">850,000 CDF</span>
+                                <button class="text-primary hover:text-primary-700 transition-fast text-sm">Télécharger PDF</button>
+                            </div>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="space-y-4">
+                            <h3 class="font-inter font-semibold text-text-primary">Méthodes de Paiement</h3>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="border border-border rounded-lg p-3 text-center">
+                                    <svg class="h-8 w-8 text-secondary mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    <div class="text-sm font-inter font-semibold">Mobile Money</div>
+                                </div>
+                                <div class="border border-border rounded-lg p-3 text-center">
+                                    <svg class="h-8 w-8 text-primary mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                                    </svg>
+                                    <div class="text-sm font-inter font-semibold">Virement</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLA Monitoring -->
+                    <div class="card">
+                        <h2 class="text-xl font-inter font-bold text-primary mb-6">Accord de Niveau de Service</h2>
+                        
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 bg-secondary-50 rounded-lg">
+                                <div>
+                                    <h3 class="font-inter font-semibold text-secondary">Disponibilité Réseau</h3>
+                                    <p class="text-sm text-text-secondary">Garantie: 99.5%</p>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-lg font-inter font-bold text-secondary">99.8%</div>
+                                    <div class="text-xs text-secondary">+0.3% bonus</div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center p-4 bg-primary-50 rounded-lg">
+                                <div>
+                                    <h3 class="font-inter font-semibold text-primary">Temps de Réponse</h3>
+                                    <p class="text-sm text-text-secondary">Garantie: < 4h</p>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-lg font-inter font-bold text-primary">1.2h</div>
+                                    <div class="text-xs text-primary">Excellent</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-border">
+                            <p class="text-sm text-text-secondary">Dernière évaluation: 1 Sept 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Base Access -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-inter font-bold text-primary mb-4">Ressources et Formation</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Accédez à vos guides personnalisés et formations</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- User Manuals -->
+                <div class="card hover:shadow-strong transition-smooth cursor-pointer" onclick="window.location.href='knowledge_center.html'">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-3">Manuels Utilisateur</h3>
+                    <p class="text-text-secondary mb-4">Guides spécifiques à vos équipements installés</p>
+                    <div class="text-sm text-primary font-inter font-semibold">3 documents disponibles</div>
+                </div>
+
+                <!-- Video Tutorials -->
+                <div class="card hover:shadow-strong transition-smooth cursor-pointer" onclick="window.location.href='training_academy.html'">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-secondary mb-3">Tutoriels Vidéo</h3>
+                    <p class="text-text-secondary mb-4">Formation personnalisée pour votre équipe</p>
+                    <div class="text-sm text-secondary font-inter font-semibold">5 vidéos disponibles</div>
+                </div>
+
+                <!-- Troubleshooting -->
+                <div class="card hover:shadow-strong transition-smooth cursor-pointer" onclick="window.location.href='knowledge_center.html'">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-accent mb-3">Dépannage</h3>
+                    <p class="text-text-secondary mb-4">Solutions aux problèmes courants</p>
+                    <div class="text-sm text-accent font-inter font-semibold">Guide interactif</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="py-12 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-inter font-bold text-white mb-6">Support d'Urgence 24/7</h2>
+            <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">Notre équipe technique est disponible en permanence pour résoudre vos problèmes critiques.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <!-- Phone Support -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-fast cursor-pointer" onclick="window.location.href='tel:+243970123456'">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-white mb-2">Appel d'Urgence</h3>
+                    <p class="text-blue-100 text-sm mb-3">Ligne directe technique</p>
+                    <p class="text-white font-inter font-semibold text-lg">+243 973 992 892</p>
+                </div>
+
+                <!-- WhatsApp Support -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-fast cursor-pointer" onclick="window.open('https://wa.me/243973992892?text=URGENCE - Hôtel Panorama - Problème technique critique', '_blank')">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.106"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-white mb-2">WhatsApp Urgence</h3>
+                    <p class="text-blue-100 text-sm mb-3">Message instantané prioritaire</p>
+                    <p class="text-white font-inter font-semibold">Chat Maintenant</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-blue-100 text-sm">Procédure d'escalade: Niveau 1 (0-2h) → Niveau 2 (2-4h) → Direction (4h+)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-10 w-auto mr-3" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="15" width="30" height="30" rx="6" fill="#3B82F6"/>
+                            <rect x="20" y="25" width="10" height="10" rx="2" fill="#10B981"/>
+                            <path d="M50 20h8v4h-8v-4zm0 8h12v4H50v-4zm0 8h10v4H50v-4z" fill="#3B82F6"/>
+                            <text x="70" y="25" font-family="Inter" font-weight="600" font-size="18" fill="white">HSF / </text>
+                            <text x="70" y="45" font-family="Inter" font-weight="200" font-size="12" fill="#EA580C">DigiConnect</text>
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Votre partenaire de confiance pour la transformation numérique au Sud-Kivu. Expertise locale, standards internationaux.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-fast">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-fast">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-fast">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-inter font-semibold text-white mb-6">Liens Rapides</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about_us.html" class="text-gray-300 hover:text-white transition-fast">À Propos</a></li>
+                        <li><a href="training_academy.html" class="text-gray-300 hover:text-white transition-fast">Formation</a></li>
+                        <li><a href="knowledge_center.html" class="text-gray-300 hover:text-white transition-fast">Centre de Connaissances</a></li>
+                        <li><a href="client_portal.html" class="text-gray-300 hover:text-white transition-fast">Portail Client</a></li>
+                        <li><a href="contact_consultation.html" class="text-gray-300 hover:text-white transition-fast">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-inter font-semibold text-white mb-6">Contact</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-gray-300">Bukavu, Sud-Kivu, RDC</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span class="text-gray-300">+243 973 992 892</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <span class="text-gray-300">contact@digiconnectpro.cd</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">© 2025 HSF/ DigiConnect Pro. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Support Ticket Modal -->
+    <div id="ticketModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-inter font-bold text-primary">Nouveau Ticket de Support</h2>
+                    <button onclick="closeTicketModal()" class="text-gray-400 hover:text-gray-600 transition-fast">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-inter font-semibold text-text-primary mb-2">Priorité</label>
+                        <select class="form-input">
+                            <option>Normale</option>
+                            <option>Élevée</option>
+                            <option>Urgente</option>
+                            <option>Critique</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-inter font-semibold text-text-primary mb-2">Catégorie</label>
+                        <select class="form-input">
+                            <option>Problème réseau</option>
+                            <option>Problème matériel</option>
+                            <option>Demande de service</option>
+                            <option>Formation</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-inter font-semibold text-text-primary mb-2">Sujet</label>
+                        <input type="text" class="form-input" placeholder="Décrivez brièvement le problème" />
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-inter font-semibold text-text-primary mb-2">Description détaillée</label>
+                        <textarea class="form-input h-32" placeholder="Décrivez le problème en détail, les étapes pour le reproduire, et l'impact sur vos opérations"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-inter font-semibold text-text-primary mb-2">Pièces jointes</label>
+                        <input type="file" class="form-input" multiple accept="image/*,.pdf,.doc,.docx" />
+                        <p class="text-sm text-text-secondary mt-2">Formats acceptés: Images, PDF, Word (max 10MB par fichier)</p>
+                    </div>
+
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" onclick="closeTicketModal()" class="px-6 py-3 border border-border rounded-lg font-inter font-semibold text-text-secondary hover:bg-surface transition-fast">
+                            Annuler
+                        </button>
+                        <button type="submit" class="btn-primary">
+                            Créer le Ticket
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openTicketModal() {
+            document.getElementById('ticketModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTicketModal() {
+            document.getElementById('ticketModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function showBillingSection() {
+            document.getElementById('billing-section').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = event.target.closest('button');
+            
+            if (!menu.contains(event.target) && !button) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('ticketModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeTicketModal();
+            }
+        });
+
+        // Simulate real-time updates
+        setInterval(function() {
+            const uptimeElement = document.querySelector('.text-3xl.font-inter.font-bold.text-secondary');
+            if (uptimeElement && uptimeElement.textContent === '99.8%') {
+                // Simulate small fluctuations in uptime
+                const uptimes = ['99.8%', '99.9%', '99.7%'];
+                const randomUptime = uptimes[Math.floor(Math.random() * uptimes.length)];
+                uptimeElement.textContent = randomUptime;
+            }
+        }, 30000); // Update every 30 seconds
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card, section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
